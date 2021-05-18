@@ -4,7 +4,7 @@
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
       <%= f.label :name, "名前（例：山田 太郎）" %><br />
-      <%= f.email_field :name, autofocus: true, autocomplete: "name", class: "name-box" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "name-box" %>
     </div>
 
     <div class="field">
@@ -15,7 +15,7 @@
     <div class="field">
       <%= f.label :password,"パスワード" %>
       <% if @minimum_password_length %>
-      <em>（英数字混合６文字以上）</em>
+      <em>（６文字以上）</em>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "new-password", class: "password-box" %>
     </div>
