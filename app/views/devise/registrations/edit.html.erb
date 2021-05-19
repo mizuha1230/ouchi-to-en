@@ -13,7 +13,15 @@
       </div>
 
       <div class="field">
-        <%= f.label :password,"パスワード" %>
+        <%= f.label :current_password,"現在のパスワード" %>
+        <% if @minimum_password_length %>
+        <em>（６文字以上）</em>
+        <% end %><br />
+        <%= f.password_field :current_password, autocomplete: "current-password", class: "password-box" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password,"新しいパスワード" %>
         <% if @minimum_password_length %>
         <em>（６文字以上）</em>
         <% end %><br />
