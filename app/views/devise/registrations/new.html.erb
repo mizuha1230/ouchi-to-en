@@ -15,7 +15,7 @@
     <div class="field">
       <%= f.label :password,"パスワード" %>
       <% if @minimum_password_length %>
-      <em>（６文字以上）</em>
+      <em>（英数字混合６文字以上）</em>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "new-password", class: "password-box" %>
     </div>
