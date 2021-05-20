@@ -1,0 +1,20 @@
+  <div class="sign-in">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <h2>＊ログイン＊</h2>
+      <div class="field">
+        <%= f.label :email, "メールアドレス" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email-box" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, "パスワード（英数字混合６文字以上）" %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "password-box" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "ログイン", class: "sign-btn" %>
+      </div>
+    <% end %>
+  </div>
+
