@@ -6,4 +6,13 @@ class ActivitiesController < ApplicationController
   def new
     @activity = Activity.new
   end
+
+  def create
+    @activity = Activity.new(activity_params)
+  end
+
+  private
+  def activity_params
+    params.require(:activity).permit(:image, :activity_content, :contact).merge(user_id: current_user.id)
+  end
 end
