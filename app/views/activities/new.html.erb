@@ -3,6 +3,7 @@
     <div class="form__wrapper">
       <h2 class="page-heading">＊新規活動内容投稿＊</h2>
         <%= form_with model: @activity, local: true do |f|%>
+        <%= render 'layouts/error_messages', model: f.object %>
           <div class="field">
             <%= f.label :image, "・・・画像・・・", class: :label__title %><br />
             <%= f.file_field :image, class: :form__image, id:"en_image" %>
