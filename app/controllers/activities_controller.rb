@@ -8,7 +8,12 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    Activity.create(activity_params)
+    @activity = Activity.new(activity_params)
+    if @activity.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
