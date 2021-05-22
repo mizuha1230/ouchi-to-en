@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get 'activities/index'
   root to: "activities#index"
   resources :users, only: [:edit, :update]
-  resources :activities, only: [:index, :new]
+  resources :activities, only: [:index, :new, :create]
 end
