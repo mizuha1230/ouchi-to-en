@@ -8,7 +8,7 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    @activity = Activity.new(activity_params)
+    Activity.create(activity_params)
   end
 
   private
