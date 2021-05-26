@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :show]
   before_action :redirect_root, only: [:new, :create]
   def index
     @activities = Activity.all
