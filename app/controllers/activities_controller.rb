@@ -19,6 +19,7 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
   def activity_params
     params.require(:activity).permit(:image, :activity_content, :contact).merge(user_id: current_user.id)
   end

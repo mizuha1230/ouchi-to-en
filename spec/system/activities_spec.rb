@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Activities", type: :system do
+RSpec.describe 'Activities', type: :system do
   before do
     @user = FactoryBot.create(:user)
   end
@@ -14,9 +14,9 @@ RSpec.describe "Activities", type: :system do
       post = 'テスト'
       fill_in 'activity[activity_content]', with: post
       # 送信した値がDBに保存されていることを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Activity.count }.by(1)
+      end.to change { Activity.count }.by(1)
       # 投稿一覧画面に遷移していることを確認する
       expect(current_path).to eq(root_path)
       # 送信した値がブラウザに表示されていることを確認する
@@ -37,15 +37,14 @@ RSpec.describe "Activities", type: :system do
       fill_in 'activity[activity_content]', with: post
       fill_in 'activity[contact]', with: post
       # 送信した値がDBに保存されていることを確認する
-      expect{
+      expect  do
         find('input[name="commit"]').click
-      }.to change { Activity.count}.by(1)
+      end.to change { Activity.count }.by(1)
       # 送信した値がブラウザに表示されていることを確認する
       expect(page).to have_content(post)
       # 送信した画像がブラウザに表示されていることを確認する
       expect(page).to have_selector('img')
     end
-
   end
   context '活動内容投稿ができないとき' do
     it 'ログインしていないと新規投稿ページに遷移できない' do
@@ -69,5 +68,4 @@ RSpec.describe "Activities", type: :system do
       expect(page).to have_no_content('投稿する')
     end
   end
-
 end
