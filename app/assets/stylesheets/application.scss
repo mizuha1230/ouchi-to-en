@@ -14,11 +14,7 @@
  @import "bootstrap";
 
 .card {
-  height: 400px;
-}
-
-.card-img-top {
-  height: 250px;
+  height: 200px;
 }
 
 .sign-in {
@@ -82,3 +78,36 @@ ul {
 .alert-warning {
   padding-right: 60px;
 }
+
+.main {
+  text-align: center;
+}
+
+.activity_image {
+  margin: 0 auto;
+}
+
+.content_title {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.content_detail {
+  margin: 0 auto;
+  font-size: 20px;
+  word-break: break-word;
+  width: 400px;
+}
+
+.contact_title {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+.contact_detail {
+  margin: 0 auto;
+  font-size: 20px;
+  word-break: break-word;
+  width: 400px;
+}
+

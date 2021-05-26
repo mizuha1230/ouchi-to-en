@@ -1,0 +1,25 @@
+<main class="main">
+  <div class="inner">
+      <div class="activity_image">
+        <%= image_tag @activity.image.variant(resize: '500x500') if @activity.image.attached? %>
+      </div>
+      <div class="activity_body">
+        <div class="activity_content">
+          <div class="content_title">
+            <span class="badge badge-info">今日の様子</span>
+          </div>
+          <div class="content_detail">
+            <%= @activity.activity_content %>
+          </div>
+        </div>
+        <div class="activity_contact">
+          <div class="contact_title">
+            <span class="badge badge-warning">連絡事項</span>
+          </div>
+          <div class="contact_detail">
+            <%= @activity.contact %>
+          </div>
+        </div>
+      </div>
+  </div>
+</main>
