@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Activities', type: :system do
+RSpec.describe '活動内容', type: :system do
   before do
     @user = FactoryBot.create(:user)
   end
@@ -42,8 +42,6 @@ RSpec.describe 'Activities', type: :system do
       end.to change { Activity.count }.by(1)
       # 送信した値がブラウザに表示されていることを確認する
       expect(page).to have_content(post)
-      # 送信した画像がブラウザに表示されていることを確認する
-      expect(page).to have_selector('img')
     end
   end
   context '活動内容投稿ができないとき' do
@@ -67,5 +65,30 @@ RSpec.describe 'Activities', type: :system do
       # 新規投稿ページへのリンクがない
       expect(page).to have_no_content('投稿する')
     end
+  end
+end
+
+RSpec.describe '活動内容詳細', type: :system do
+  before do
+    @activity = FactoryBot.create(:activity)
+    image_path = Rails.root.join('public/images/test_image.png')
+  end
+  it 'ログインしたユーザーは活動内容詳細ページに遷移し、活動内容の詳細が表示される' do
+    # ログインする
+    sign_in(@activity.user)
+    # 活動内容に「詳細」ボタンがあることを確認する
+    expect(page).to have_link '詳細', href: activity_path(@activity)
+    # 詳細ページに遷移する
+    visit activity_path(@activity)
+    # 詳細ページに活動内容が表示されている
+    expect(page).to have_selector('img')
+    expect(page).to have_content(@activity.activity_content)
+    expect(page).to have_content(@activity.contact)
+  end
+  it 'ログインしていない状態で活動内容詳細ページに遷移できない' do
+    # トップページに移動する
+    visit root_path
+    # ツイートに「詳細」ボタンがないことを確認する
+    expect(page).to have_no_link '詳細', href: activity_path(@activity)
   end
 end
