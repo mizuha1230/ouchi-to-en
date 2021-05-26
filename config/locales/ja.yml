@@ -1,0 +1,5 @@
+ja:
+  activerecord:
+    attributes:
+      activity:
+        activity_content: 今日の様子

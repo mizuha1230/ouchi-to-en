@@ -13,6 +13,14 @@
  */
  @import "bootstrap";
 
+.card {
+  height: 400px;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
 .sign-in {
   text-align: center;
 }
@@ -46,4 +54,31 @@
   margin-bottom: 10px;
   background-color: lightblue;
   border: 1px solid lightblue;
+}
+
+.form__wrapper {
+  text-align: center;
+}
+
+.form__text {
+  margin: 10px;
+  width: 50%;
+  height: 60%;
+}
+
+.form__image {
+  margin: 10px;
+}
+
+.label__title {
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+.alert-warning {
+  padding-right: 60px;
 }
