@@ -31,14 +31,14 @@
                     連絡事項：<%= activity.contact %>
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
-                    
                       <div class="btn-group">
                         <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <% if user_signed_in? %>
                         <%= link_to "詳細",activity_path(activity.id), class:"btn btn-sm btn-outline-secondary" %>
+                        <% end %>
                         <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                         <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
                       </div>
-                    
                     </div>
                   </div>
                 </div>
