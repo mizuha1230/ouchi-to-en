@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe "Activities", type: :system do
   before do
     @user = FactoryBot.create(:user)
-    @activity = FactoryBot.build(:activity)
   end
   context '活動内容投稿ができるとき' do
     it '活動内容の投稿に成功すると、トップページに遷移して、投稿した内容が表示されている' do
@@ -36,6 +35,7 @@ RSpec.describe "Activities", type: :system do
       # 値をテキストフォームに入力する
       post = 'テスト'
       fill_in 'activity[activity_content]', with: post
+      fill_in 'activity[contact]', with: post
       # 送信した値がDBに保存されていることを確認する
       expect{
         find('input[name="commit"]').click
@@ -51,6 +51,20 @@ RSpec.describe "Activities", type: :system do
     it 'ログインしていないと新規投稿ページに遷移できない' do
       # トップページに遷移する
       visit root_path
+      # 新規投稿ページへのリンクがない
+      expect(page).to have_no_content('投稿する')
+    end
+    it 'user_idが1以外の場合は新規投稿ページに遷移できない' do
+      # ログインページへ移動する
+      visit new_user_session_path
+      # サインインする
+      user_name = '山田二郎'
+      user_email = 'test2@test.com'
+      user_password = 'test12'
+      fill_in 'メールアドレス', with: user_email
+      fill_in 'パスワード', with: user_password
+      # ログインボタンをクリックする
+      find('input[name="commit"]').click
       # 新規投稿ページへのリンクがない
       expect(page).to have_no_content('投稿する')
     end
