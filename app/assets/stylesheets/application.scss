@@ -13,14 +13,18 @@
  */
  @import "bootstrap";
 
+
+
 * {
   box-sizing: border-box;
 }
 
+/* トップページ */
 .card {
   height: 200px;
 }
 
+/* ユーザー登録 */
 .sign-in {
   text-align: center;
 }
@@ -56,6 +60,7 @@
   border: 1px solid lightblue;
 }
 
+/* 活動内容 */
 .form__wrapper {
   text-align: center;
 }
@@ -115,3 +120,46 @@ ul {
   width: 400px;
 }
 
+/* 連絡ルーム */
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color:#FFEEFF;
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+}
+
+.rooms {
+  background-color: #FFDDFF;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.chat {
+  background-color:#FFFFEE;
+  width: calc(100vw - 300px);
+}
+
+.chat-header {
+  height: 100px;
+  padding: 0 40px;
+}
+
+.messages {
+  background-color: #FFFFDD;
+  height: calc(100vh - 100px - 90px);
+  padding: 40px 40px 0;
+}
+
+.form {
+  background-color: #EEEEEE;
+  height: 90px;
+  padding: 20px 40px;
+}
