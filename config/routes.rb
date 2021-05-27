@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "activities#index"
   resources :users, only: [:edit, :update]
   resources :activities, only: [:index, :new, :create, :show]
+  resources :messages,  only: :index
 end
