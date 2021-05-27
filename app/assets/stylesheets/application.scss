@@ -13,6 +13,10 @@
  */
  @import "bootstrap";
 
+* {
+  box-sizing: border-box;
+}
+
 .card {
   height: 200px;
 }
