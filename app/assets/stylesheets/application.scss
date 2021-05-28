@@ -24,6 +24,7 @@
   height: 200px;
 }
 
+
 /* ユーザー登録 */
 .sign-in {
   text-align: center;
@@ -163,9 +164,9 @@ ul {
 
 .room-name a {
   font-size: 20px;
-  color: #AAAAAA;
-  background-color: white;
-  border: none;
+  color: #555555;
+  background-color: #FFEEFF;
+  border: solid 1px #DDDDDD;
 }
 
 .chat {
@@ -176,16 +177,95 @@ ul {
 .chat-header {
   height: 100px;
   padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  color: #333;
+  font-size: 24px;
+}
+
+.header-button a {
+  font-size: 15px;
 }
 
 .messages {
   background-color: #FFFFDD;
   height: calc(100vh - 100px - 90px);
   padding: 40px 40px 0;
+  overflow: scroll;
+}
+
+.message {
+  margin: 10px 0 30px;
+  border: ridge 3px white;
+  padding-left: 5px;
+}
+
+.upper-message {
+  display: flex;
+}
+
+.message-user {
+  color: #BBBBBB;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #CCCCCC;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.message-heat {
+  color: #444444;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.message-condition {
+  color: #444444;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
 }
 
 .form {
   background-color: #EEEEEE;
   height: 90px;
   padding: 20px 40px;
+  display: flex;
 }
+
+.form-group {
+  display: flex;
+  margin-right: 5px;
+}
+
+#exampleFormControlSelect1 {
+  font-size: 15px;
+  height: 50px;
+}
+
+#exampleFormControlTextarea1{
+  width: 350px;
+  height: 50px;
+  padding-top: 13px;
+  margin-right: 5px;
+}
+
+.btn-outline-dark {
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.hidden {
+  display: none;
+}
+
