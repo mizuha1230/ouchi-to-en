@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create]
   before_action :redirect_room, only: [:new, :create]
 
   def index

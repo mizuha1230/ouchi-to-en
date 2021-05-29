@@ -14,12 +14,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <%= link_to "ホーム",root_path, class:"btn btn-outline-primary" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "連絡ルーム",rooms_index_path, class:"btn btn-outline-warning" %>
+          <%= link_to "ホーム",root_path, class:"btn btn-outline-secondary" %>
         </li>
         <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "連絡ルーム",rooms_index_path, class:"btn btn-outline-warning" %>
+          </li>
           <li class="nav-item">
             <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class:"btn btn-outline-danger" %>
           </li>
