@@ -2,9 +2,11 @@
   <div class="header-name">
     <a href="#">保護者の名前</a>
   </div>
-  <div class="create-room">
-    <%= link_to "ルームを作成する",new_room_path, class:"btn btn-light" %>
-  </div>
+  <% if user_signed_in? && current_user.id == 1 %>
+    <div class="create-room">
+      <%= link_to "ルームを作成する",new_room_path, class:"btn btn-light" %>
+    </div>
+  <% end %>
 </div>
 
 <div class="rooms">
