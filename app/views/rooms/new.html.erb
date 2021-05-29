@@ -3,20 +3,22 @@
     <h1>＊新規連絡ルーム作成＊</h1>
     <%= form_with model: @room, local: true do |f| %>
     <div class="room-form-group">
-      <label for="exampleFormControlInput1">ルーム名</label>
-      <input type="email" class="room-form-control" id="exampleFormControlInput1" placeholder="連絡ルーム名を入力してください（子どもの名前）">
+      <%= f.label :ルーム名 %>
+      <%= f.text_field :room_name, class: "room-form-control", placeholder: "連絡ルーム名を入力してください（子どもの名前）" %>
     </div>
     <div class="room-form-group">
       <label for="exampleFormControlSelect1">メンバー</label>
-      <select class="room-form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+      <select name="room[user_ids][]" class="room-form-control" id="exampleFormControlSelect1">
+        <option>連絡する保護者を選択してください</option>
+        <% User.where.not(id: current_user.id).each do |user| %>
+          <option value=<%= user.id %>><%= user.name %></option>
+        <% end %>
       </select>
+      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
     </div>
-    <button type="submit" class="btn btn-primary">ルームを作成</button>
+    <div class="room-form-group">
+      <%= f.submit "作成する", class: "btn btn-primary"%>
+    </div>
     <% end %>
   </div>
 </form>
