@@ -12,55 +12,13 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        ユーザー名
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed)
-      </div>
-      <div class="message-heat">
-        体温：36.0度　／
-      </div>
-      <div class="message-condition">
-        体調：良い
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        おはようございます
-      </div>
-    </div>
-  </div>
-
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        ユーザー名
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed)
-      </div>
-      <div class="message-heat">
-        体温：36.0度　／
-      </div>
-      <div class="message-condition">
-        体調：良い
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        おはようございます
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
     <%= f.select :heat, [["35.5度", "35.5度"],["35.6度", "35.6度"],["35.7度", "35.7度"],["35.8度", "35.8度"],["35.9度", "35.9度"],["36.0度", "36.0度"],["36.1度", "36.1度"],["36.2度", "36.2度"],["36.3度", "36.3度"],["36.4度", "36.4度"],["36.5度", "36.5度"],["36.6度", "36.6度"],["36.7度", "36.7度"],["36.8度", "36.8度"],["36.9度", "36.9度"],["37.0度", "37.0度"],["37.1度", "37.1度"],["37.2度", "37.2度"],["37.3度", "37.3度"],["37.4度", "37.4度"],["37.5度以上", "37.5度以上"]], include_blank: "体温",  class: "form-control", id: "content" %>
-    <%= f.select :condition, [["良い", "良い"],["普通", "普通"],["悪い", "悪い"]], include_blank: "体調", class: "form-control", id: "content" %>
+    <%= f.select :condition, [["良い", "1"],["普通", "2"],["悪い", "3"]], include_blank: "体調", class: "form-control", id: "content" %>
     <%= f.text_area :content, class: "form-control", placeholder:"メッセージを入力", id:"content", rows:"3" %>
     <label class="form-image">
       <span class="btn btn-outline-dark">画像</span>
