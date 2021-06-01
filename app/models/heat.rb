@@ -23,3 +23,8 @@ class Heat < ActiveHash::Base
     { id: 21, name: '37.4度' },
     { id: 22, name: '37.5度以上' }
   ]
+
+  include ActiveHash::Associations
+  has_many :messages
+
+end
