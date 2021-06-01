@@ -2,8 +2,8 @@ class Message < ApplicationRecord
   belongs_to :room
   belongs_to :user
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :heat
-  belongs_to_active_hash :condition
+  belongs_to :heat
+  belongs_to :condition
 
   with_options presence: true do
     validates :heat
@@ -15,5 +15,5 @@ class Message < ApplicationRecord
     validates :heat
     validates :condition
   end
-  
+
 end
