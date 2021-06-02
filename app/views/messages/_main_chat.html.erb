@@ -17,8 +17,8 @@
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <%= f.collection_select(:heat_id, Heat.all, :id, :name, {}, {class:"form-control", id:"content"}) %>
-    <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"form-control", id:"content"}) %>
+    <%= f.collection_select(:heat_id, Heat.all, :id, :name, {}, {class:"form-control", id:"select-box"}) %>
+    <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"form-control", id:"select-box"}) %>
     <%= f.text_area :content, class: "form-control", placeholder:"メッセージを入力", id:"content", rows:"3" %>
     <label class="form-image">
       <span class="btn btn-outline-dark">画像</span>

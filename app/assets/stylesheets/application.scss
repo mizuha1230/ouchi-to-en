@@ -248,13 +248,18 @@ ul {
   width: 100%;
 }
 
+#select-box {
+  width: 80px;
+  height: 50px;
+}
+
 #content {
-  border: solid 1px #333333;
   width: 75%;
   padding-top: 13px;
 }
 
 .btn-outline-dark {
+  border: dotted 1px;
   height: 50px;
   padding-top: 13px;
 }

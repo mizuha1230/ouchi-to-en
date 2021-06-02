@@ -26,5 +26,4 @@ class Heat < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :messages
-
 end
