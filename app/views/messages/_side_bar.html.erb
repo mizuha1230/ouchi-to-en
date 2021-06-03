@@ -13,7 +13,7 @@
   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
-        <a class="btn btn-outline-dark" href="#"><%= room.room_name %></a>
+        <%= link_to room.room_name, room_messages_path(room), class:"btn btn-outline-dark" %>
       </div>
     </div>
   <% end %>

@@ -167,6 +167,7 @@ ul {
   color: #555555;
   background-color: #FFEEFF;
   border: solid 1px #DDDDDD;
+  margin-left: 75px;
 }
 
 .chat {
@@ -236,32 +237,30 @@ ul {
 }
 
 .form {
-  background-color: #EEEEEE;
+  background-color:#EEEEEE;
   height: 90px;
   padding: 20px 40px;
   display: flex;
 }
 
-.form-group {
+.form-input {
   display: flex;
-  margin-right: 5px;
+  width: 100%;
 }
 
-#exampleFormControlSelect1 {
-  font-size: 15px;
+#select-box {
+  width: 80px;
   height: 50px;
 }
 
-#exampleFormControlTextarea1{
-  width: 350px;
-  height: 50px;
+#content {
+  width: 75%;
   padding-top: 13px;
-  margin-right: 5px;
 }
 
 .btn-outline-dark {
+  border: dotted 1px;
   height: 50px;
-  text-align: center;
   padding-top: 13px;
 }
 
@@ -270,7 +269,7 @@ ul {
 }
 
 
-/* 連絡ルーム */
+/* 連絡ルーム作成ページ */
 .room-form-group {
   text-align: center;
 }
