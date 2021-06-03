@@ -3,3 +3,8 @@ ja:
     attributes:
       activity:
         activity_content: 今日の様子
+
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d"
