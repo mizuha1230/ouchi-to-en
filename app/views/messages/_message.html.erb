@@ -1,22 +1,39 @@
 <div class="message">
-  <div class="upper-message">
-    <div class="message-user">
-      <%= message.user.name %>
-    </div>
-    <div class="message-date">
-      <%= l message.created_at %>
-    </div>
-    <div class="message-heat">
-      <%= message.heat.name %>
-    </div>
-    <div class="message-condition">
-      <%= message.condition.name %>
-    </div>
-  </div>
-  <div class="lower-message">
-    <div class="message-content">
-      <%= message.content %>
-    </div>
-    <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
+  <div id="upper-message">
+    <% if message.user_id == current_user.id %>
+      <div class="user-date">
+        <p><%= l message.created_at %></p>
+      </div>
+      <div class="mycomment">
+        <div class="health-message">
+          <p>【体温】<%= message.heat.name %> 【体調】<%= message.condition.name %></p>
+        </div>
+        <p><%= message.content %></p>
+      </div>
+        <div class="user-image">
+            <%= image_tag message.image.variant(resize: '200x200'), class: 'message-image' if message.image.attached? %>
+        </div>
+    <% else %>
+      <div class="partner-date">
+        <p><%= l message.created_at %></p>
+      </div>
+      <div class="fukidasi">
+        <div class="message-user">
+          <%= message.user.name %>
+        </div>
+        <div class="messaging">
+          <div class="says">
+            <div class="health-message">
+              <p>【体温】<%= message.heat.name %> 【体調】<%= message.condition.name %></p>
+            </div>
+            <p><%= message.content %></p>
+          </div>
+          <div class="partner-image">
+            <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
+
