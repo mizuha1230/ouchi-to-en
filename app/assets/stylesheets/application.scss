@@ -26,40 +26,40 @@
 
 
 /* ユーザー登録 */
-.sign-in {
-  text-align: center;
-}
+  .sign-in {
+    text-align: center;
+  }
 
-.sign-up {
-  text-align: center;
-}
+  .sign-up {
+    text-align: center;
+  }
 
-.edit {
-  text-align: center;
-}
+  .edit {
+    text-align: center;
+  }
 
-.name-box {
-  width: 300px;
-  margin-bottom: 10px;
-}
+  .name-box {
+    width: 300px;
+    margin-bottom: 10px;
+  }
 
-.email-box {
-  width: 300px;
-  margin-bottom: 10px;
-}
+  .email-box {
+    width: 300px;
+    margin-bottom: 10px;
+  }
 
-.password-box {
-  width: 300px;
-  margin-bottom: 15px;
-}
+  .password-box {
+    width: 300px;
+    margin-bottom: 15px;
+  }
 
-.sign-btn {
-  width: 300px;
-  height: 40px;
-  margin-bottom: 10px;
-  background-color: lightblue;
-  border: 1px solid lightblue;
-}
+  .sign-btn {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+  }
 
 /* 活動内容 */
 .form__wrapper {
@@ -122,6 +122,7 @@ ul {
 }
 
 /* 連絡ルーム */
+
 .wrapper {
   display: flex;
 }
@@ -140,7 +141,7 @@ ul {
   align-items: center;
 }
 
-.header-name a{
+.header-name {
   font-size: 20px;
   color: black;
   text-decoration: none;
@@ -192,6 +193,7 @@ ul {
   font-size: 15px;
 }
 
+/* メッセージ一覧 */
 .messages {
   background-color: #FFFFDD;
   height: calc(100vh - 100px - 90px);
@@ -199,41 +201,110 @@ ul {
   overflow: scroll;
 }
 
-.message {
-  margin: 10px 0 30px;
-  border: ridge 3px white;
-  padding-left: 5px;
+#upper-message{
+  padding: 20px 10px;
+  margin: 15px auto;
+  text-align: right;
+  font-size: 14px;
 }
 
-.upper-message {
-  display: flex;
+.user-date {
+  color: #999999;
+  margin-bottom: 5px;
 }
 
-.message-user {
-  color: #BBBBBB;
-  font-size: 16px;
+.partner-date {
+  text-align: left;
+  color: #999999;
 }
 
-.message-date {
-  color: #CCCCCC;
-  font-size: 12px;
-  padding-left: 10px;
+
+.health-message {
+  font-size: 13px;
 }
 
-.message-heat {
-  color: #444444;
-  font-size: 12px;
-  padding-left: 10px;
+.fukidasi {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
 }
 
-.message-condition {
-  color: #444444;
-  font-size: 12px;
-  padding-left: 10px;
+.fukidasi .message-user {
+  float: left;
+  margin-right: -50px;
+  width: 40px;
 }
 
-.lower-message {
-  margin-top: 10px;
+.fukidasi .messaging {
+  width: 100%;
+  text-align: left;
+}
+
+.says {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 50px;
+  padding: 10px;
+  max-width: 90%;
+  border-radius: 12px;
+  background: #edf1ee;
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #edf1ee;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+.mycomment p {
+  margin: 10px 0;
+}
+
+.mycomment {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 0 0;
+  padding: 8px;
+  max-width: 250px;
+  border-radius: 12px;
+  background: #CCFFFF;
+  font-size: 20px;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.mycomment p:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -19px;
+  border: 8px solid transparent;
+  border-left: 18px solid #CCFFFF;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+.user-image {
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.partner-image {
+  margin-left: 55px;
+  margin-top: 15px;
 }
 
 .form {

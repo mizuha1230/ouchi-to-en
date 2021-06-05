@@ -1,10 +1,14 @@
 <div class="side-bar-header">
-  <div class="header-name">
-    <a href="#">保護者の名前</a>
-  </div>
   <% if user_signed_in? && current_user.id == 1 %>
+    <div class="header-name">
+    <%= current_user.name %>
+    </div>
     <div class="create-room">
       <%= link_to "ルームを作成する",new_room_path, class:"btn btn-light" %>
+    </div>
+  <% else %>
+    <div class="header-name">
+      <%= current_user.name %>さん　こんにちは
     </div>
   <% end %>
 </div>
