@@ -6,19 +6,16 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <a class="btn btn-danger" href="#">ルームを終了する</a>
+      <%= link_to "ルームを終了する",room_path(@room), class:"btn btn btn-danger", method: :delete %>
     </div>
   </div>
 </div>
 
-<div id="list">
-</div>
-
 <div id="message-container">
-  <%= render @messages %>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
-<%= form_with model: [@room, @message], class: 'form-box', id: "form-box" do |f| %>
+<%= form_with model: [@room, @message], class: 'form', id: "form" do |f| %>
   <div class="form-input">
     <%= f.collection_select(:heat_id, Heat.all, :id, :name, {}, {class:"btn btn-outline-secondary dropdown-toggle", id:"select_box"}) %>
     <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"btn btn-outline-secondary dropdown-toggle", id:"select_box"}) %>
