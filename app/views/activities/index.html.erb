@@ -7,15 +7,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
-  
-
-    <h1>🌻ひまわりほいくえん🌻</h1>
     <% if user_signed_in? %>
       <div class="greeting">
         こんにちは、
         <%= link_to "#{current_user.name}さん", edit_user_registration_path(current_user.id) %>
       </div>
     <% end %>
+  <div id='calendar'></div>
+  <%= javascript_pack_tag 'calendar/event' %>
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row">
@@ -34,10 +33,13 @@
                       <div class="btn-group">
                         <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
                         <% if user_signed_in? %>
-                        <%= link_to "詳細",activity_path(activity.id), class:"btn btn-sm btn-outline-secondary" %>
+                          <%= link_to "詳細",activity_path(activity.id), class:"btn btn-sm btn-outline-secondary" %>
                         <% end %>
                         <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                        <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
+                        <% if user_signed_in? && current_user.id == 1 %>
+                          <%= link_to "編集", edit_activity_path(activity.id), class:"btn btn-sm btn-outline-secondary" %>
+                          <%= link_to "削除", activity_path(activity.id), method: :delete, class:"btn btn-sm btn-outline-secondary" %>
+                        <% end %>
                       </div>
                     </div>
                   </div>
