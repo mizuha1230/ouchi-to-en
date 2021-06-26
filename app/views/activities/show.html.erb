@@ -1,4 +1,7 @@
 <main class="main">
+  <div class="main-date">
+    <p><%= l @activity.created_at %></p>
+  </div>
   <div class="inner">
       <div class="activity_image">
         <%= image_tag @activity.image.variant(resize: '500x500') if @activity.image.attached? %>
@@ -9,7 +12,7 @@
             <span class="badge badge-info">今日の様子</span>
           </div>
           <div class="content_detail">
-            <%= @activity.activity_content %>
+            <%= simple_format(@activity.activity_content) %>
           </div>
         </div>
         <div class="activity_contact">
@@ -17,7 +20,7 @@
             <span class="badge badge-warning">連絡事項</span>
           </div>
           <div class="contact_detail">
-            <%= @activity.contact %>
+            <%= simple_format(@activity.contact) %>
           </div>
         </div>
       </div>
