@@ -13,17 +13,17 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to events_path
       respond_to do |format|
-        format.html { redirect_to root_path } 
+        format.html { redirect_to root_path }
         format.js
       end
     else
       respond_to do |format|
-        format.js {render partial: "error" }
+        format.js { render partial: 'error' }
       end
     end
   end
 
   def params_event
-      params.require(:event).permit(:title, :start, :end_time).merge(user_id: current_user.id)
+    params.require(:event).permit(:title, :start, :end_time).merge(user_id: current_user.id)
   end
 end

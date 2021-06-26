@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)
     @my_messages = current_user.messages
-    @message_partners = User.where.not(id:current_user.id)
+    @message_partners = User.where.not(id: current_user.id)
   end
 
   def create

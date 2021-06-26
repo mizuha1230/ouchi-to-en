@@ -16,5 +16,4 @@ class Message < ApplicationRecord
     validates :heat_id
     validates :condition_id
   end
-
 end
