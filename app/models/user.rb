@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users, validate: false
   has_many :messages
+  has_many :activities
+  has_many :events
 
   validates :name, presence: true
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*\d)[a-z\d]+\z/i.freeze

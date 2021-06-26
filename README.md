@@ -49,6 +49,7 @@
 - has_many :rooms, through: :room_users
 - has_many :messages
 - has_many :activities
+- has_many :events
 
 ## rooms テーブル
 
@@ -102,6 +103,19 @@ image(画像)はActiveStorageを用いて実装する
 - belongs_to :user
 
 image(画像)はActiveStorageを用いて実装する
+
+## events テーブル
+
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| start            | datetime   |                                |
+| end_time         | datetime   |                                |
+| user             | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
 
 # ローカルでの動作方法
 - 
