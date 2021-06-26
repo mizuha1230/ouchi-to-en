@@ -21,7 +21,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="/events">カレンダー <span class="sr-only">(current)</span></a>
+          <%= link_to "カレンダー", events_path, class: "nav-item nav-link active" %>
           <% if user_signed_in? %>
             <%= link_to "連絡ルーム", rooms_index_path, class: "nav-item nav-link" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
