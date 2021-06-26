@@ -20,10 +20,23 @@
 }
 
 /* トップページ */
+.navbar {
+  background-color: #e3f2fd;;
+}
+
 .card {
   height: 200px;
 }
 
+/* カレンダー */
+.row {
+  text-align: center;
+  justify-content: center;
+}
+
+.js-event-create-btn {
+  margin-top: 10px;
+}
 
 /* ユーザー登録 */
   .sign-in {
@@ -119,6 +132,10 @@ ul {
   font-size: 20px;
   word-break: break-word;
   width: 400px;
+}
+
+.main-date {
+  font-size: 40px;
 }
 
 /* 連絡ルーム */
@@ -357,3 +374,4 @@ ul {
   height: 60px;
   margin: 20px;
 }
+

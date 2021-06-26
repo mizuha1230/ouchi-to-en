@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show]
-  before_action :redirect_root, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :redirect_root, only: [:new, :create, :edit, :update, :destroy]
   def index
     @activities = Activity.all
   end
@@ -20,6 +20,25 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+  end
+
+  def edit
+    @activity = Activity.find(params[:id])
+  end
+
+  def update
+    @activity = Activity.find(params[:id])
+    if @activity.update(activity_params)
+      redirect_to activity_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    activity = Activity.find(params[:id])
+    activity.destroy
+    redirect_to root_path
   end
 
   private

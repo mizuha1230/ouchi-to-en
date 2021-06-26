@@ -8,7 +8,7 @@
         <div class="health-message">
           <p>【体温】<%= message.heat.name %> 【体調】<%= message.condition.name %></p>
         </div>
-        <p><%= message.content %></p>
+        <p><%= simple_format(message.content) %></p>
       </div>
         <div class="user-image">
             <%= image_tag message.image.variant(resize: '200x200'), class: 'message-image' if message.image.attached? %>
@@ -26,7 +26,7 @@
             <div class="health-message">
               <p>【体温】<%= message.heat.name %> 【体調】<%= message.condition.name %></p>
             </div>
-            <p><%= message.content %></p>
+            <p><%= simple_format(message.content) %></p>
           </div>
           <div class="partner-image">
             <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
