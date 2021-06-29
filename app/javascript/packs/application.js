@@ -12,9 +12,6 @@
 //= require jquery_ujs
 //= require_tree .
 
-import '@fullcalendar/common/main.css'
-import '@fullcalendar/daygrid/main.css'
-
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
