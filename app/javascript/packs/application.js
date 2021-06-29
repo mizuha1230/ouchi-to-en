@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 
 //= require fullcalendar
+//= require moment
 //= require jquery3
 //= require popper
 //= require bootstrap
@@ -26,3 +27,4 @@ require("../event")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
