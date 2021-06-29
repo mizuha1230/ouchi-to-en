@@ -1,12 +1,11 @@
 import { Calendar } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
-import monthGridPlugin from '@fullcalendar/daygrid'
-import googleCalendarApi from '@fullcalendar/google-calendar'
+import dayGridPlugin from '@fullcalendar/daygrid'
 
 document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new Calendar(calendarEl, {
-      plugins: [ monthGridPlugin, interactionPlugin, googleCalendarApi ],
+      plugins: [ dayGridPlugin, interactionPlugin ],
 
       locale: 'ja',
       timeZone: 'Asia/Tokyo',

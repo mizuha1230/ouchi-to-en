@@ -4,8 +4,6 @@
 // that code so it'll be compiled.
 
 //= require fullcalendar
-//= require fullcalendar/locale-all
-//= require fullcalendar/gcal
 //= require moment
 //= require jquery3
 //= require popper
