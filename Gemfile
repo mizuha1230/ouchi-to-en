@@ -71,3 +71,6 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 
 gem 'active_hash'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
