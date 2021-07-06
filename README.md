@@ -6,8 +6,9 @@
 - 家庭と保育園で一対一の連絡を取り合うことができる。（連絡帳の役割）
 - 保育園は、1日の活動内容を投稿し、保護者はそれを見ることで、子どもの保育園での様子を知ることができる。
 - 保育園は、持ち物や行事などの連絡事項を投稿し、保護者は必要な情報を得ることができる。
+- カレンダーに行事を書き込むことができ、アプリで行事を確認できる。
 # URL
-- 
+- https://ouchi-to-en.herokuapp.com/
 # テスト用アカウント
 - 
 # 利用方法
@@ -32,7 +33,7 @@
 - 
 # データベース設計
 - ER図
-[![Image from Gyazo](https://i.gyazo.com/ecd64fdaa56ae8bb59b70ced8cd513fc.png)](https://gyazo.com/ecd64fdaa56ae8bb59b70ced8cd513fc)
+[![Image from Gyazo](https://i.gyazo.com/3a80452e570c7f6b63c94c9f62b974c3.png)](https://gyazo.com/3a80452e570c7f6b63c94c9f62b974c3)
 # テーブル設計
 
 ## users テーブル
