@@ -10,7 +10,8 @@
 # URL
 - https://ouchi-to-en.herokuapp.com/
 # テスト用アカウント
-- 
+- アカウント1(メールアドレス：mizuha@test.com, パスワード：test12)
+- アカウント2(メールアドレス：tarou@test.com, パスワード：test12)
 # 利用方法
 - パソコン・スマートフォン・タブレットで使用できる。
 # 目指した課題解決
@@ -118,5 +119,3 @@ image(画像)はActiveStorageを用いて実装する
 
 - belongs_to :user
 
-# ローカルでの動作方法
-- 

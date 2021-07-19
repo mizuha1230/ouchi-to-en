@@ -54,13 +54,12 @@ ActiveRecord::Schema.define(version: 2021_06_24_123206) do
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", null: false
-    t.integer "heat_id"
-    t.integer "condition_id"
+    t.integer "heat_id", null: false
+    t.integer "condition_id", null: false
     t.bigint "room_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "partner_id"
     t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
