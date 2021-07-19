@@ -29,7 +29,23 @@
 - 詳細ページの投稿内容編集機能
 - 詳細ページの投稿内容削除機能
 # 実装した機能についての画像やGIFおよびその説明
-- 
+- トップページ（活動内容一覧ページ）
+[![Image from Gyazo](https://i.gyazo.com/b754b952bd094446f1df6d9e949126e6.png)](https://gyazo.com/b754b952bd094446f1df6d9e949126e6)
+- 新規活動内容投稿ページ
+[![Image from Gyazo](https://i.gyazo.com/78cc6db9edff24cae52c1258e1d9e8d5.png)](https://gyazo.com/78cc6db9edff24cae52c1258e1d9e8d5)
+- 活動内容詳細ページ
+[![Image from Gyazo](https://i.gyazo.com/af5152aaa3861832001972c3d566f870.png)](https://gyazo.com/af5152aaa3861832001972c3d566f870)
+[![Image from Gyazo](https://i.gyazo.com/8de358559b2f4777c4959af196b526bd.png)](https://gyazo.com/8de358559b2f4777c4959af196b526bd)
+- 連絡ルームトップページ
+[![Image from Gyazo](https://i.gyazo.com/2d2039d0a547719cd1bb5a0cae917e82.png)](https://gyazo.com/2d2039d0a547719cd1bb5a0cae917e82)
+- 連絡ルーム作成ページ
+[![Image from Gyazo](https://i.gyazo.com/aef40d6a0238fcba103cbab76ad7643d.png)](https://gyazo.com/aef40d6a0238fcba103cbab76ad7643d)
+- 連絡ルームのメッセージ一覧・送信
+[![Image from Gyazo](https://i.gyazo.com/ee6c6aa5143651087daafe5ceed9153e.png)](https://gyazo.com/ee6c6aa5143651087daafe5ceed9153e)
+- カレンダー
+[![Image from Gyazo](https://i.gyazo.com/1e2b44fb259250a2b0885979dcd57c4e.png)](https://gyazo.com/1e2b44fb259250a2b0885979dcd57c4e)
+- カレンダー行事投稿機能 
+[![Image from Gyazo](https://i.gyazo.com/b97acaccb47be1fb5d49130beb60f682.png)](https://gyazo.com/b97acaccb47be1fb5d49130beb60f682)
 # 実装予定の機能
 - 
 # データベース設計
