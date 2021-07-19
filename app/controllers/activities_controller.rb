@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
   before_action :redirect_root, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @activities = Activity.all
+    @activities = Activity.order("created_at DESC")
   end
 
   def new
