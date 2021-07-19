@@ -47,7 +47,9 @@
 - カレンダー行事投稿機能 
 [![Image from Gyazo](https://i.gyazo.com/b97acaccb47be1fb5d49130beb60f682.png)](https://gyazo.com/b97acaccb47be1fb5d49130beb60f682)
 # 実装予定の機能
-- 
+- カレンダー行事詳細ページ
+- 通知機能
+- ActionCableを使ったメッセージの送受信非同期通信
 # データベース設計
 - ER図
 [![Image from Gyazo](https://i.gyazo.com/3a80452e570c7f6b63c94c9f62b974c3.png)](https://gyazo.com/3a80452e570c7f6b63c94c9f62b974c3)
