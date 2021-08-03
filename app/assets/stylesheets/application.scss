@@ -148,7 +148,7 @@ ul {
 
 .side-bar {
   background-color:#FFEEFF;
-  width: 300px;
+  width: 260px;
   height: 100vh;
 }
 
@@ -187,12 +187,11 @@ ul {
   color: #555555;
   background-color: #FFEEFF;
   border: solid 1px #DDDDDD;
-  margin-left: 75px;
 }
 
 .chat {
   background-color:#FFFFEE;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 260px);
   
 }
 
@@ -330,7 +329,7 @@ ul {
 .form {
   background-color:#EEEEEE;
   height: 90px;
-  padding: 20px 40px;
+  padding: 15px 40px;
   display: flex;
 }
 
@@ -339,20 +338,14 @@ ul {
   width: 100%;
 }
 
-#select-box {
-  width: 80px;
-  height: 50px;
-}
-
 #message_content {
   width: 70%;
   padding-top: 13px;
 }
 
 .btn-outline-dark {
-  border: dotted 1px;
-  height: 50px;
-  padding-top: 13px;
+  border-style: dashed;
+  height: 110%;
 }
 
 .hidden {
